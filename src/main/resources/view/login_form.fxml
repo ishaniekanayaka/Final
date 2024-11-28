@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="400.0" style="-fx-background-color: #202046;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="854.0" layoutX="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../icon/img_16.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9acac" height="606.0" layoutX="194.0" layoutY="22.0" opacity="0.91" strokeType="INSIDE" width="453.0">
+         <effect>
+            <InnerShadow choke="0.23" height="107.56" radius="78.43" width="208.16" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="269.0" layoutY="281.0" text="User Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="269.0" layoutY="369.0" text="Password">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="47.0" prefHeight="58.0" prefWidth="239.0" text="Welcome..." textFill="#3b062e">
+         <font>
+            <Font name="Segoe Print" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="210.0" text="Login" textFill="#202046">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="256.0" layoutY="187.0" prefHeight="10.0" prefWidth="342.0" />
+      <JFXButton fx:id="btnLogin" layoutX="352.0" layoutY="494.0" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #713e68; -fx-background-radius: 15px;" text="LOGIN" textFill="WHITE" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="367.99999999999994" AnchorPane.topAnchor="494.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="244.0" layoutY="120.0" text="Culinary Academy" textFill="#713e68">
+         <font>
+            <Font name="Segoe UI Semilight Italic" size="48.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="272.0" layoutY="318.0" onAction="#txtUserNameOnAction" prefHeight="39.0" prefWidth="270.0" promptText="User  Name" style="-fx-background-radius: 10px;" />
+      <TextField fx:id="txtPassword" layoutX="271.0" layoutY="404.0" onAction="#txtPasswordOnAction" prefHeight="39.0" prefWidth="270.0" promptText="Password" style="-fx-background-radius: 10px;" />
+   </children>
+</AnchorPane>

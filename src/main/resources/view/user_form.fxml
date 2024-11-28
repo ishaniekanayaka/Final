@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootStudent" opacity="0.95" prefHeight="660.0" prefWidth="890.0" style="-fx-background-color: black; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.UserFormController">
+    <effect>
+        <InnerShadow choke="0.52" height="65.45" radius="48.015" width="128.61">
+            <color>
+                <Color red="1.0" green="1.0" blue="1.0" />
+            </color>
+        </InnerShadow>
+    </effect>
+    <children>
+        <Label layoutX="322.0" layoutY="14.0" prefHeight="64.0" prefWidth="234.0" text="Manage User" textFill="#d1abcc">
+            <font>
+                <Font name="Segoe Print" size="36.0" />
+            </font>
+        </Label>
+        <Separator layoutX="48.0" layoutY="299.0" prefHeight="30.0" prefWidth="794.0" />
+        <Label layoutX="48.0" layoutY="353.0" text="ID:" textFill="#a6a1a1">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtId" editable="false" layoutX="159.0" layoutY="348.0" prefHeight="33.0" prefWidth="282.0" promptText="ID" />
+        <Label layoutX="48.0" layoutY="437.0" text="Password:" textFill="#a6a1a1">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtPassword" layoutX="157.0" layoutY="435.0" prefHeight="33.0" prefWidth="282.0" promptText="password" />
+        <Label layoutX="48.0" layoutY="523.0" text="User Name:" textFill="#a6a1a1">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtName" layoutX="159.0" layoutY="521.0" prefHeight="33.0" prefWidth="282.0" promptText="Name" />
+        <Label layoutX="461.0" layoutY="350.0" text="User Role:" textFill="#a6a1a1">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="btnSave" layoutX="565.0" layoutY="434.0" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #202046; -fx-background-radius: 10px;" text="SAVE" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="btnDelete" layoutX="713.0" layoutY="434.0" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #064012; -fx-background-radius: 10px;" text="DELETE" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="btnUpdate" layoutX="565.0" layoutY="505.0" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #5b0d53; -fx-background-radius: 10px;" text="UPDATE" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="btnClear" layoutX="713.0" layoutY="503.0" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #0d5652; -fx-background-radius: 10px;" text="CLEAR" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <ComboBox fx:id="cmbType" layoutX="559.0" layoutY="349.0" prefHeight="31.0" prefWidth="282.0" promptText="Admin" />
+      <TableView fx:id="UserTable" layoutX="100.0" layoutY="85.0" onMouseClicked="#tblUserOnMouseClicked" prefHeight="187.0" prefWidth="682.0">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="100.800048828125" text="ID" />
+            <TableColumn fx:id="colUserName" prefWidth="154.40000915527344" text="User Name" />
+            <TableColumn fx:id="colUserPassword" prefWidth="207.20001220703125" text="User PassWord" />
+            <TableColumn fx:id="colUserRole" prefWidth="210.4000244140625" text="User Role" />
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>

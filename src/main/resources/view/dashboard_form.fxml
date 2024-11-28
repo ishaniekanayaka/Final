@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainroot" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1100.0" pickOnBounds="true">
+         <image>
+            <Image url="@../icon/img_8.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="22.0" layoutY="15.0" prefHeight="660.0" prefWidth="167.0" style="-fx-background-color: black; -fx-background-radius: 20px;">
+         <effect>
+            <InnerShadow choke="0.39" height="77.14" radius="43.92" width="100.54">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <children>
+            <JFXButton fx:id="btnStudent" layoutX="24.0" layoutY="145.0" onAction="#btnStudentOnAction" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #533e27; -fx-background-radius: 10px;">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/img_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow height="163.71" radius="66.7325" spread="0.27" width="105.22">
+                     <color>
+                        <Color red="0.9894737005233765" green="0.9894737005233765" blue="0.9894737005233765" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnPayment" layoutX="24.0" layoutY="271.0" onAction="#btnPaymentOnAction" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #533e27; -fx-background-radius: 10px;">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/img_7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnUser" layoutX="24.0" layoutY="397.0" onAction="#btnUserOnAction" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #533e27; -fx-background-radius: 10px;">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/img_12.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="24.0" layoutY="527.0" onAction="#btnLogoutOnAction" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #533e27; -fx-background-radius: 10px;">
+               <graphic>
+                  <ImageView fitHeight="90.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/img_11.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnProgramme" layoutX="29.0" layoutY="33.0" onAction="#btnProgrammeOnAction" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #533e27; -fx-background-radius: 10px;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="82.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/img_3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="200.0" layoutY="16.0" opacity="0.86" prefHeight="660.0" prefWidth="890.0" style="-fx-background-color: black; -fx-background-radius: 20px;">
+         <effect>
+            <InnerShadow choke="0.39" height="79.49" radius="66.1475" width="187.1">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <children>
+            <Label layoutX="148.0" layoutY="176.0" prefHeight="82.0" prefWidth="605.0" text="The Culinary Academy" textFill="#b983a5">
+               <font>
+                  <Font name="Segoe Print" size="46.0" />
+               </font>
+            </Label>
+            <Label layoutX="272.0" layoutY="53.0" text="Welcome..." textFill="WHITE">
+               <font>
+                  <Font name="Kristen ITC" size="64.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="319.0" fitWidth="338.0" layoutX="229.0" layoutY="173.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icon/img_9.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTime" layoutX="55.0" layoutY="451.0" prefHeight="82.0" prefWidth="321.0" text="00:00" textFill="#df8383">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="497.0" layoutY="451.0" prefHeight="82.0" prefWidth="386.0" text="DD:MM:YYYY" textFill="#df8383">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
